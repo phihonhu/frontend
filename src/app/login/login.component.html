@@ -1,0 +1,22 @@
+<div class="login-container spaced-columns">
+  <div class="login-box spaced-columns">
+    <div class="peax-logo-with-claim peax-logo-medium"></div>
+  </div>
+  <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate class="login-box spaced-columns">
+    <md-input-container>
+      <input mdInput type="text" class="form-control" formControlName="email"
+            i18n-placeholder placeholder="account.email"/>
+      <md-error i18n [hidden]="loginForm.controls.email.valid || loginForm.controls.email.untouched"
+            class="text-danger">account.email.required</md-error>
+    </md-input-container>
+    <md-input-container>
+      <input mdInput type="password" class="form-control" formControlName="password"
+            i18n-placeholder placeholder="account.password"/>
+      <md-error i18n [hidden]="loginForm.controls.password.valid || loginForm.controls.password.untouched"
+            class="text-danger">account.password.required</md-error>
+    </md-input-container>
+    <button class="login-pill-button" type="submit" [disabled]="loginForm.invalid || isLoading">
+      <span i18n>account.login</span>
+    </button>
+  </form>
+</div>

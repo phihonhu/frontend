@@ -1,0 +1,47 @@
+@import "src/theme/font";
+@import "src/theme/svg";
+
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height:100%;
+
+    background-image: url('/assets/peax3-test-bg-image.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: orange;
+    background-attachment: fixed;
+    background-size: cover;
+
+    section-cockpit {
+        background: #342;
+    }
+
+}
+
+a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cdk-overlay-container .cdk-overlay-pane{
+    position: fixed;
+    z-index: 5;
+    padding-right: 25px;
+    margin-top: 42px;
+
+    .px-profile-menu-title{
+        margin: 0px 50px;
+    }
+}

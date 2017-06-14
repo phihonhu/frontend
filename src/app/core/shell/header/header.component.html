@@ -1,0 +1,56 @@
+<header>  
+  <div class="header-container">
+    <div class="toggle-menu">
+      <button class="btn-menu" (click)="showMobileMenu()">
+          <md-icon>format_align_justify</md-icon>
+      </button>
+      <span class="section-title">{{title}}</span>
+      <button class="btn-toggle-logout" (click)="logout()">
+        <md-icon>input</md-icon>
+      </button>
+    </div>
+    <div class="left-container">
+      <a class="peax-logo" routerLink="/cockpit" routerLinkActive="active">
+        <div class="peax-logo-no-claim peax-logo-small"></div>
+      </a>
+      <nav>
+        <a routerLink="/archive" routerLinkActive="active">
+          <span i18n>Archive</span>
+        </a>
+        <a routerLink="/contacts" routerLinkActive="active">
+          <span i18n>Contacts</span>
+        </a>
+        <a routerLink="/organisations" routerLinkActive="active">
+          <span i18n>Organisations</span>
+        </a>
+        <a routerLink="/profile" routerLinkActive="active">
+          <span i18n>Profile</span>
+        </a>
+        <a routerLink="/recyclebin" routerLinkActive="active">
+          <span i18n>Recycle Bin</span>
+        </a>
+        <a routerLink="/uploads" routerLinkActive="active">
+          <span i18n>Uploads</span>
+        </a>
+      </nav>
+    </div>
+    <div class="right-container">
+      <button class="btn-search">
+          <md-icon>search</md-icon>
+      </button>
+      <px-profile-menu [imageUrl]="imageUrl" [menuTitle]="menuTitle" [listItem]="listItem" [avatarSize]="34"></px-profile-menu>
+      <button class="btn-logout" (click)="logout()">
+        <span>Logout</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-navigation" *ngIf="isMobileNavVisible">
+    <div class="menu-item-container">
+      <px-menu-item *ngFor="let item of menuItems" [menuItem]="item"></px-menu-item>
+      <div class="btn-nav-logout" (click)="showMobileMenu()">        
+         <button md-fab><md-icon>close</md-icon></button>
+      </div>
+    </div>
+  </div>
+</header>

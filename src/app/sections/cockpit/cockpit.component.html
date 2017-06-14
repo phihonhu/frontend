@@ -1,0 +1,9 @@
+<div class="stream-container">
+  <div class="stream-header"> <span>Stream</span>
+    <div class="line"></div>
+  </div>
+  <div class="stream-item">
+    <px-stream-list *ngIf="streamItems" [streamItems]="streamItems" [groupBy]="groupBy">
+    </px-stream-list>
+  </div>
+</div>
