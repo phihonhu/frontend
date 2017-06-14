@@ -1,21 +1,15 @@
-import { browser } from 'protractor';
-import { NgxStarterKitPage } from './app.po';
+import { browser, element, by } from 'protractor';
 
-describe('app', () => {
-  let page: NgxStarterKitPage;
+describe('QuickStart E2E Tests', function () {
 
-  beforeEach(() => {
-    page = new NgxStarterKitPage();
+  let expectedMsg = 'Hello Angular';
+
+  beforeEach(function () {
+    browser.get('');
   });
 
-  it('should display login page and login into app', () => {
-    page.navigateTo();
-    expect(browser.getCurrentUrl()).toContain('/login');
-    page.login();
+  it('should display: ' + expectedMsg, function () {
+    expect(element(by.css('h1')).getText()).toEqual(expectedMsg);
   });
 
-  it('should display hello message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Hello world !');
-  });
 });

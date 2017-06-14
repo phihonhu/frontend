@@ -1,70 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8"/>
-  <title>PEAX</title>
-  <base href="/"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-</head>
-<body>
-  <!--[if lt IE 11]>
-  <p>
-    You are using an <strong>outdated</strong> browser.
-    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-  </p>
-  <![endif]-->
-  <app-root></app-root>
+  <head>
+    <title>Angular QuickStart</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
 
-  <!--
-  /**
-  * @license
-  * MyFonts Webfont Build ID 3382335, 2017-05-01T07:16:37-0400
-  * 
-  * The fonts listed in this notice are subject to the End User License
-  * Agreement(s) entered into by the website owner. All other parties are 
-  * explicitly restricted from using the Licensed Webfonts(s).
-  * 
-  * You may obtain a valid license at the URLs below.
-  * 
-  * Webfont: AvenirLTStd-Medium by Linotype
-  * URL: http://www.myfonts.com/fonts/linotype/avenir/65-medium/
-  * Copyright: Copyright &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights
-  * reserved. Copyright &#x00A9; 1989 - 2002 Adobe Systems Incorporated.  All Rights
-  * Reserved.
-  * 
-  * Webfont: AvenirLTStd-Light by Linotype
-  * URL: http://www.myfonts.com/fonts/linotype/avenir/35-light/
-  * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All
-  * Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights
-  * reserved.
-  * 
-  * Webfont: AvenirLTStd-Black by Linotype
-  * URL: http://www.myfonts.com/fonts/linotype/avenir/95-black/
-  * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All
-  * Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights
-  * reserved.
-  * 
-  * 
-  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3382335
-  * Licensed pageviews: 250,000
-  * 
-  * © 2017 MyFonts Inc
-  */
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
 
-  -->
-  <script type="text/javascript">
-    var protocol=document.location.protocol;
-    "https:"!=protocol&&(protocol="http:");
-    var count=document.createElement("script");
-    count.type="text/javascript";
-    count.async=!0;
-    count.src=protocol+"//hello.myfonts.net/count/339c3f";
-    var s=document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(count,s);
-  </script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
 
-</body>
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading AppComponent content here ...</my-app>
+  </body>
 </html>
