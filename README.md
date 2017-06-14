@@ -1,4 +1,4 @@
-# PEAX3 Portal
+# TEST3 Portal
 This project is based on the [ngx-starter-kit](https://github.com/ngx-rocket/starter-kit) and uses the `pixie` library and the angular-internal i18n native angular translation tool.
 
 # Setup
@@ -19,21 +19,6 @@ npm run generate [component|directive|pipe|service|class|guard|interface|enum|mo
 1. `npm run start-en`
 2. open browser and navigate to: http://localhost:4200
 3. Login with Username: `username` Password: `password`
-
-# Update `pixie` library
-1. push your changes to a certain branch on git
-2. `npm run update-pixie`
-3. depending on which branch of `pixie` you are using, in the `package.json` of the base project, you have to change:
-
-```
-"pixie": "git+ssh://git@gitlab.peaxlabs.ch:frontend/pixie",
-```
-
-to
-
-```
-"pixie": "git+ssh://git@gitlab.peaxlabs.ch:frontend/pixie#my_branch_name",
-```
 
 # How to make a section to lazy load (load on demand)
 E.g. for section "archive"
